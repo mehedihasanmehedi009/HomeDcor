@@ -1,9 +1,9 @@
 import React from 'react';
 
 const ProductDetails = ({Allcard}) => {
-    const {image,description,name,category
+    const {image,description,name
 ,material
-,price,stock
+,price
 
 } =Allcard
     return (
