@@ -1,15 +1,14 @@
 import { useLoaderData } from "react-router";
-import Products from "./Products";
+
 import ProductCard from "./ProductCard";
 import { Link } from "react-router";
+import useCoustomHook from "../../../Houk/useCoustomHook";
 
  
 
 const Home = () => {
-    // console.log(dsjfhs.ldf)
-    const Product = useLoaderData()
-    const productscard = Product.slice(0,6)
-    console.log(Product)
+    const {products,loading,error} = useCoustomHook()
+    const productscard = products.slice(0,6)
     return (
         <>
           <div className="flex justify-between mb-4">
