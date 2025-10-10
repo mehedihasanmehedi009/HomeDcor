@@ -7,5 +7,5 @@ import { router } from './components/Pages/Router/Router.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 )

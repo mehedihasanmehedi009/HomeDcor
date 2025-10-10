@@ -1,4 +1,4 @@
-import axios from 'axios';
+ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const useCoustomHook = () => {
@@ -8,13 +8,16 @@ const useCoustomHook = () => {
 
  useEffect(() => {
     setLoading(true)
-    axios("furnitureData.json")
+    axios
+    .get("../furnitureData.json")
     .then((data)=>  setProducts(data.data))
-    .catch(err=>setError(err)
+    .catch(err=>setError(err))
     .finally(()=>setLoading(false))
-)
+
  },[])
  return{products,loading,error}
 };
 
 export default useCoustomHook;
+
+ 

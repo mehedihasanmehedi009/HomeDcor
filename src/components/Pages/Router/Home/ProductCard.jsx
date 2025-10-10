@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const ProductCard = ({Decortor}) => {
-const {image,description,name,category
+const { id,image,description,name
 ,material
-,price,stock
+,price
 
 } =Decortor
     return (
@@ -22,7 +23,7 @@ const {image,description,name,category
     <p>price:${price}</p>
     <p>Material:{material}</p>
       <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+        <Link to={`/product/${id}`} className=" btn btn-outline">Visit Now</Link>
     </div>
   </div>
 </div>

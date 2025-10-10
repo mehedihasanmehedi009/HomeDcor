@@ -4,6 +4,8 @@ import Products from "./Home/Products";
 import MainLayout from "../../Layouts/MainLayout";
 import ErrorPages from "./Home/ErrorPages";
 import Wishlist from "./Home/Wishlist";
+import Productdetils from "./Home/Productdetils";
+import LoadingSpiner from "../../LoadingSpiner";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,7 @@ export const router = createBrowserRouter([
     {
     index:true,
     element:<Home/>,
+   
   }
   ,
   {
@@ -25,7 +28,11 @@ export const router = createBrowserRouter([
   {
     path:"/Wishlist",
     element:<Wishlist/>
-  }
+  },
+ {
+  path:"/product/:id",
+  element:<Productdetils/>
+ }
  ],
 } 
 
